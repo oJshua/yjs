@@ -7,6 +7,9 @@
     "test": "node --harmony ./node_modules/.bin/gulp test",
     "lint": "./node_modules/.bin/standard"
   },
+  "browserify": {
+    "transform": [["babelify", { "presets": ["es2015"] }]]
+  },
   "pre-commit": [
     "lint",
     "test"
